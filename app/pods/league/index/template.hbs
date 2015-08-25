@@ -1,0 +1,6 @@
+<h2>Leagues</h2>
+
+{{#each model as |league|}}
+  <b class="league">{{league.name}}</b> {{league.abbr}} : {{league.region}}
+  <hr>
+{{/each}}

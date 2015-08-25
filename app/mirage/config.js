@@ -1,5 +1,13 @@
 export default function() {
 
+  this.get('/api/leagues', function(db) {
+    return {
+      data: db.leagues.map(attrs => (
+        { type: 'leagues', id: attrs.id, attributes: attrs }
+      ))
+    };
+  });
+
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
