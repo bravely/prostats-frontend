@@ -7,5 +7,8 @@ export default DS.Model.extend({
   finished: DS.attr('boolean'),
   maxGames: DS.attr('number'),
   tournament: DS.belongsTo('tournament'),
-  games: DS.hasMany('games')
+  games: DS.hasMany('games'),
+  blueTeam: DS.belongsTo('team'),
+  redTeam: DS.belongsTo('team'),
+  winner: DS.belongsTo('team')
 });

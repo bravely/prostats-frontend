@@ -6,5 +6,10 @@ export default DS.Model.extend({
   gameLength: DS.attr('number'),
   gameNumber: DS.attr('number'),
   youtubeUrl: DS.attr('string'),
-  match: DS.belongsTo('match')
+  match: DS.belongsTo('match'),
+  blueTeam: DS.belongsTo('team'),
+  redTeam: DS.belongsTo('team'),
+  winner: DS.belongsTo('team'),
+  players: DS.hasMany('player'),
+  plays: DS.hasMany('play')
 });
