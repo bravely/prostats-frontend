@@ -1,8 +1,8 @@
 import { moduleForModel, test } from 'ember-qunit';
 
-moduleForModel('league', 'Unit | Model | league', {
+moduleForModel('tournament', 'Unit | Model | tournament', {
   // Specify the other units that are required for this test.
-  needs: ['model:tournament']
+  needs: ['model:league']
 });
 
 test('it exists', function(assert) {
