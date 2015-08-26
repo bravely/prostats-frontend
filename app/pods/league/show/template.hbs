@@ -3,6 +3,6 @@
 
 <ul>
 {{#each model.tournaments as |tournament|}}
-  <li>{{#link-to 'tournament.show' tournament.id}}{{tournament.name}}{{/link-to}}</li>
+  <li class="tournament">{{#link-to 'tournament.show' tournament.id}}{{tournament.name}}{{/link-to}}</li>
 {{/each}}
 </ul>

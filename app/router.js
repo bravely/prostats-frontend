@@ -17,6 +17,10 @@ Router.map(function() {
   this.route('tournament', function() {
     this.route('show', { path: '/:tournament_id' } );
   });
+
+  this.route('match', function() {
+    this.route('show', { path: '/:match_id' } );
+  });
 });
 
 export default Router;

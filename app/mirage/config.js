@@ -8,6 +8,34 @@ export default function() {
     };
   });
 
+  this.get('/api/leagues/:id', function(db, request) {
+    var id = request.params.id;
+    // var collectIncluded = db.series.where({ league_id: id }).concat(db.tournaments.where({ league_id: id}));
+
+    return {
+      data: {
+        type: 'leagues',
+        id: id,
+        attributes: db.users.find(id),
+        relationships: {
+          series: {
+            data: db.series.where({ league_id: id }).map(attrs => (
+              { type: 'series', id: attrs.id }
+            ))
+          },
+          tournaments: {
+            data: db.tournaments.where({ league_id: id }).map(attrs => (
+              { type: 'tournaments', id: attrs.id }
+            ))
+          }
+        }
+      },
+      included: db.tournaments.where({ league_id: id }).map(attrs => (
+        { type: 'tournaments', id: attrs.id, attributes: attrs }
+      ))
+    };
+  });
+
   // These comments are here to help you get started. Feel free to delete them.
 
   /*
