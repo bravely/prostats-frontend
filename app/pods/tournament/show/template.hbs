@@ -1,0 +1,7 @@
+<h2>{{model.name}}</h2>
+
+<ul>
+{{#each model.matches as |match|}}
+  <li>{{match.name}} - {{match.playedAt}}</li>
+{{/each}}
+</ul>

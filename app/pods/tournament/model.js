@@ -6,5 +6,6 @@ export default DS.Model.extend({
   endsAt: DS.attr('date'),
   finished: DS.attr('boolean'),
   season: DS.attr('string'),
-  league: DS.belongsTo('league')
+  league: DS.belongsTo('league'),
+  matches: DS.hasMany('match')
 });

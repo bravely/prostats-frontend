@@ -9,6 +9,14 @@ Router.map(function() {
   this.route('league', function() {
     this.route('show', { path: '/:league_id' });
   });
+
+  this.route('game', function() {
+    this.route('show', { path: '/:game_id' });
+  });
+
+  this.route('tournament', function() {
+    this.route('show', { path: '/:tournament_id' } );
+  });
 });
 
 export default Router;
