@@ -1,1 +1,7 @@
-{{outlet}}
+<h2>{{model.name}}</h2>
+
+<ol>
+{{#each model.games as |game|}}
+  <li class="game">{{#link-to 'game.show' game.id}}{{game.blueTeam.name}} vs. {{game.redTeam.name}}{{/link-to}} - {{game.playedAt}}</li>
+{{/each}}
+</ol>

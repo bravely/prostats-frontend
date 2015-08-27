@@ -2,6 +2,8 @@
 
 <ul>
 {{#each model.matches as |match|}}
-  <li>{{match.name}} - {{match.playedAt}}</li>
+  <li>{{#link-to 'match.show' match.id}}{{match.name}}{{/link-to}} - {{match.playedAt}}</li>
+{{else}}
+  This tournament has no matches.
 {{/each}}
 </ul>

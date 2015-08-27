@@ -1,5 +1,9 @@
 export default function() {
 
+  ////////////////////////
+  // League Resources
+  ////////////////////////
+
   this.get('/api/leagues', function(db) {
     return {
       data: db.leagues.map(attrs => (
@@ -33,6 +37,38 @@ export default function() {
       included: db.tournaments.where({ league_id: id }).map(attrs => (
         { type: 'tournaments', id: attrs.id, attributes: attrs }
       ))
+    };
+  });
+
+  ////////////////////////////
+  // Tournaments Resources
+  ////////////////////////////
+
+  this.get('/api/tournaments/:id', function(db, request) {
+    var id = request.params.id;
+
+    return {
+      data: {
+        type: 'tournaments',
+        id: id,
+        attributes: db.tournaments.find(id)
+      }
+    };
+  });
+
+  //////////////////////////
+  // Match Resources
+  //////////////////////////
+
+  this.get('/api/matches/:id', function(db, request) {
+    var id = request.params.id;
+
+    return {
+      data: {
+        type: 'matches',
+        id: id,
+        attributes: db.matches.find(id)
+      }
     };
   });
 
