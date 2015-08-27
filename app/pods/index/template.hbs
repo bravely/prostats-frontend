@@ -1,0 +1,9 @@
+<ul>
+{{#each model as |match|}}
+  <li>
+  {{#link-to 'match.show' match.id}}
+    <b>{{match.name}}</b> - {{match.playedAt}}
+  {{/link-to}}
+  </li>
+{{/each}}
+</ul>
