@@ -1,0 +1,6 @@
+<h2>Leagues</h2>
+
+{{#each model as |league|}}
+  {{#link-to 'league.show' league.id}}<b class="league">{{league.name}}</b>{{/link-to}} {{league.abbr}} : {{league.region}}
+  <hr>
+{{/each}}
