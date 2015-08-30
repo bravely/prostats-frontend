@@ -5,5 +5,6 @@ export default Mirage.Factory.extend({
   'starts-at': faker.date.past,
   'ends-at': faker.date.recent,
   finished: faker.list.random(true, false),
-  season: faker.company.companyName
+  season: faker.company.companyName,
+  'last-played-at': faker.date.past
 });
