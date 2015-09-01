@@ -1,6 +1,10 @@
 <h2>{{model.name}}</h2>
 <ul>
-  <li>{{model.blueTeam.name}}</li>
-  <li>{{model.redTeam.name}}</li>
-  <li>{{model.winner.name}}</li>
+  <li>Blue Team: {{model.blueTeam.name}}</li>
+  <li>Red Team: {{model.redTeam.name}}</li>
+  <li>Winner: {{model.winner.name}}</li>
 </ul>
+
+{{#each model.plays as |play|}}
+  {{play-card play=play}}
+{{/each}}
