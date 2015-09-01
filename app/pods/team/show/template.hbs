@@ -1,0 +1,9 @@
+<div class="team">
+  <h2 class="name">{{model.name}}</h2>
+  <span class="acronym">{{model.acronym}}</span>
+</div>
+
+{{#each model.players as |player|}}
+  {{player-card player=player}}
+  <hr>
+{{/each}}

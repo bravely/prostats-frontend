@@ -2,7 +2,7 @@ import { moduleForComponent, test } from 'ember-qunit';
 import hbs from 'htmlbars-inline-precompile';
 import startMirage from '../../../../helpers/setup-mirage-for-integration';
 
-moduleForComponent('play-card', 'Integration | Component | play card', {
+moduleForComponent('player-card', 'Integration | Component | player card', {
   integration: true,
   setup: function() {
     startMirage(this.container);
@@ -15,12 +15,11 @@ test('it renders', function(assert) {
   // Set any properties with this.set('myProperty', 'value');
   // Handle any actions with this.on('myAction', function(val) { ... });
   var team = server.create('team'),
-      player = server.create('player'),
-      play = server.create('play', { player: player, team: team });
-  this.set('play', play);
+      player = server.create('player', { team: team });
+  this.set('player', player);
 
-  this.render(hbs`{{play-card play=play}}`);
+  this.render(hbs`{{player-card player=player}}`);
 
-  assert.equal(this.$('.teamAcronym').text().trim(), team.acronym);
-  assert.equal(this.$('.name').text().trim(), player.handle);
+  assert.equal(this.$('.handle').text().trim(), `"${player.handle}"`);
+  assert.equal(this.$('.position').text().trim(), player.position);
 });
