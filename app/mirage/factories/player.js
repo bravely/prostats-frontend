@@ -7,4 +7,6 @@ export default Mirage.Factory.extend({
   'last-name': faker.name.lastName,
   'season-wins': faker.random.number(19),
   'season-losses': faker.random.number(19),
+  starter: faker.list.random(true, false),
+  'contract-expires-at': faker.date.future
 });

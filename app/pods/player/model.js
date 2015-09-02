@@ -7,5 +7,7 @@ export default DS.Model.extend({
   lastName: DS.attr('string'),
   seasonWins: DS.attr('number'),
   seasonLosses: DS.attr('number'),
+  starter: DS.attr('boolean'),
+  contractExpiresAt: DS.attr('date'),
   team: DS.belongsTo('team')
 });

@@ -1,3 +1,4 @@
+import Ember from 'ember';
 import DS from 'ember-data';
 
 export default DS.Model.extend({
@@ -11,5 +12,7 @@ export default DS.Model.extend({
   redTeam: DS.belongsTo('team'),
   winner: DS.belongsTo('team'),
   players: DS.hasMany('player'),
-  plays: DS.hasMany('play')
+  plays: DS.hasMany('play'),
+
+  redTeamPlays: Ember.computed.filter('plays', (play) => play.get('team.id') === this.get('redTeam.id')).property('plays', 'redTeam')
 });

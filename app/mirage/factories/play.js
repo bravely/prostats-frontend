@@ -7,5 +7,6 @@ export default Mirage.Factory.extend({
   kda: faker.random.number(8),
   'end-level': faker.random.number(18),
   'total-gold': faker.random.number(15000),
-  'minions-killed': faker.random.number(400)
+  'minions-killed': faker.random.number(400),
+  position: faker.list.random('top', 'jungle', 'middle', 'marksman', 'support')
 });
