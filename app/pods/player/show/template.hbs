@@ -1,0 +1,10 @@
+<h2 class="name">{{model.firstName}} "{{model.handle}}" {{model.lastName}}</h2>
+<h4 class="position">{{model.position}}</h4>
+<span class="teamName">{{model.team.name}}</span>:
+<span class="starter">
+{{#if model.starter}}
+  Starter
+{{else}}
+  Substitute
+{{/if}}
+</span>

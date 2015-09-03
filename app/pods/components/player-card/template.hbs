@@ -1,8 +1,10 @@
 <div class="player">
   <b>
+    {{#link-to 'player.show' player.id}}
     {{player.firstName}}
     <span class="handle">"{{player.handle}}"</span>
     {{player.lastName}}
+    {{/link-to}}
   </b>
   <br>
   <span class="position">{{player.position}}</span>

@@ -25,6 +25,10 @@ Router.map(function() {
   this.route('team', function() {
     this.route('show', { path: '/:team_id' });
   });
+
+  this.route('player', function() {
+    this.route('show', { path: '/:player_id' });
+  });
 });
 
 export default Router;
