@@ -1,8 +1,10 @@
 <div class="play">
+  {{#link-to 'player.show' play.player.id}}
   <span class="teamAcronym">{{play.team.acronym}}</span>.
   <b>
     <span class="name">{{play.player.handle}}</span>
-  </b> |
+  </b>
+  {{/link-to}} |
   <span>{{play.position}}</span> -
   {{play.kills}} / {{play.deaths}} / {{play.assists}}
   <br>
