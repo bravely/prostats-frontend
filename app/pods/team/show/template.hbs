@@ -1,11 +1,11 @@
 <div class="team">
-  <h2 class="name">{{model.team.name}}</h2>
-  <span class="acronym">{{model.team.acronym}}</span>
+  <h2 class="name">{{model.name}}</h2>
+  <span class="acronym">{{model.acronym}}</span>
 </div>
 
-{{#each model.team.players as |player|}}
+{{#each model.players as |player|}}
   {{player-card player=player}}
   <hr>
 {{/each}}
 
-{{match-list matches=model.matches}}
+{{outlet}}
