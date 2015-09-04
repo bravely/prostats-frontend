@@ -23,7 +23,9 @@ Router.map(function() {
   });
 
   this.route('team', function() {
-    this.route('show', { path: '/:team_id' });
+    this.route('show', { path: '/:team_id' }, function() {
+      this.route('matches');
+    });
   });
 
   this.route('player', function() {
