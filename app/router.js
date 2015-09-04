@@ -29,7 +29,9 @@ Router.map(function() {
   });
 
   this.route('player', function() {
-    this.route('show', { path: '/:player_id' });
+    this.route('show', { path: '/:player_id' }, function() {
+      this.route('games');
+    });
   });
 });
 
