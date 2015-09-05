@@ -34,6 +34,6 @@ export default Ember.Component.extend({
   toPageValue: null,
   isFirstPage: Ember.computed.equal('page', 1),
   isLastPage: Ember.computed('page', 'maxPages', function() {
-    return this.get('page') === this.get('maxPages');
+    return this.get('page') >= this.get('maxPages');
   })
 });
