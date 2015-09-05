@@ -1,1 +1,6 @@
-{{match-list matches=model page=page maxPages=maxPages}}
+<div class="matchList">
+  {{#each model as |match|}}
+    {{match-card match=match}}
+  {{/each}}
+  {{pagination-controls page=page maxPages=maxPages}}
+</div>

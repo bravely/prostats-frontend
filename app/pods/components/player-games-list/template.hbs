@@ -1,16 +1,6 @@
 <div class="games">
-{{#each games as |game|}}
-  {{game-card game=game}}
-{{/each}}
-<div class="listControls">
-  <button class="firstPage" {{action "firstPage"}}>First</button>
-  <button class="previousPage" disabled={{isFirstPage}} {{action "previousPage"}}>Previous</button>
-  {{#if toPageActivated}}
-    {{input value=toPageValue enter="toPage"}}
-  {{else}}
-    <button class="toPage" {{action "toggleToPageActivated"}}>{{page}}</button>
-  {{/if}}
-  <button class="nextPage" disabled={{isLastPage}} {{action "nextPage"}}>Next </button>
-  <button class="last" {{action "lastPage"}}>Last</button>
-</div>
+  {{#each games as |game|}}
+    {{game-card game=game}}
+  {{/each}}
+  {{pagination-controls page=page maxPages=maxPages}}
 </div>

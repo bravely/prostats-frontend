@@ -1,1 +1,6 @@
-{{player-games-list games=model page=page maxPages=maxPages}}
+<div class="games">
+  {{#each model as |game|}}
+    {{game-card game=game}}
+  {{/each}}
+  {{pagination-controls page=page maxPages=maxPages}}
+</div>
