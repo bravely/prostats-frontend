@@ -1,5 +1,10 @@
-<div class="game">
-  {{#link-to 'game.show' game.id}}
-    {{game.blueTeam.name}} vs. {{game.redTeam.name}}
-  {{/link-to}} - {{game.playedAt}}
-</div>
+<tr class="game">
+  <td>
+    {{#link-to 'game.show' game.id}}
+      {{game.blueTeam.name}} vs. {{game.redTeam.name}}
+    {{/link-to}}
+  </td>
+  <td>
+    {{game.playedAt}}
+  </td>
+</tr>
