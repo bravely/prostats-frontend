@@ -5,6 +5,8 @@
   <li>Winner: {{model.winner.name}}</li>
 </ul>
 
+<table>
 {{#each model.plays as |play|}}
   {{play-card play=play}}
 {{/each}}
+</table>

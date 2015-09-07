@@ -1,10 +1,14 @@
 <table class="u-full-width">
-{{#each model as |match|}}
-  <tr>
-  {{#link-to 'match.show' match.id}}
-    <td>{{match.name}}</td>
-    <td>{{match.playedAt}}</td>
-  {{/link-to}}
-  </tr>
-{{/each}}
+  <tbody>
+    {{#each model as |match|}}
+      <tr>
+        <td>
+          {{#link-to 'match.show' match.id}}
+            {{match.name}}
+          {{/link-to}}
+        </td>
+        <td>{{moment-format match.playedAt}}</td>
+      </tr>
+    {{/each}}
+  </tbody>
 </table>

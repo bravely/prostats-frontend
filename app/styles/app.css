@@ -1,0 +1,31 @@
+/*html {
+  background-color: #c7c2c3;
+}*/
+
+body {
+  margin-top: 0.5em;
+  color: #6c6c6c;
+  font-family: "Montserrat", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 3px solid #ac8a42;
+  margin: 1em 0;
+  padding: 0;
+  color: #007a66;
+}
+
+td {
+  border-bottom: 1px solid #ac8a42;
+}
+
+a {
+  color: #007a66;
+}
+
+a:hover {
+  color: #015547;
+}*/

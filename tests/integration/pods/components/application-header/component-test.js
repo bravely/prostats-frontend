@@ -13,7 +13,7 @@ test('it renders', function(assert) {
 
   this.render(hbs`{{application-header}}`);
 
-  assert.equal(this.$('#title').text().trim(), 'Prostats');
+  assert.equal(this.$('.logo').attr('src'), 'assets/images/logo.png');
 
   // Template block usage:
   // this.render(hbs`
