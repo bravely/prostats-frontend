@@ -14,7 +14,7 @@ test('it renders', function(assert) {
   this.render(hbs`{{game-card}}`);
 
   // this is nonsense
-  assert.equal(this.$().text().trim(), `vs. \n   -`);
+  assert.equal(this.$().text().trim(), 'vs.');
 
   // Template block usage:
   // this.render(hbs`
