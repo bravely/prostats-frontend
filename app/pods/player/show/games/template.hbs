@@ -1,0 +1,8 @@
+<div class="games">
+  {{#each model as |game|}}
+    {{game-card game=game}}
+  {{else}}
+    This player has no games.
+  {{/each}}
+  {{pagination-controls page=page maxPages=maxPages}}
+</div>

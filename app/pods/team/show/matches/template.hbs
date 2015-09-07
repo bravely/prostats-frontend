@@ -1,1 +1,8 @@
-{{match-list matches=model page=page maxPages=maxPages}}
+<div class="matchList">
+  {{#each model as |match|}}
+    {{match-card match=match}}
+  {{else}}
+    This team has no matches.
+  {{/each}}
+  {{pagination-controls page=page maxPages=maxPages}}
+</div>
