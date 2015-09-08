@@ -21,8 +21,13 @@ You will need the following things properly installed on your computer.
 
 ## Running / Development
 
-* `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
+To use this application properly, you need a data-loaded backend. If
+you've processed some Leagues, then start your server, and follow
+it up with:
+
+* `ember server --proxy http://localhost:3000`
+
+Then feel free to visit it at http://localhost:4200.
 
 
 ### Running Tests
