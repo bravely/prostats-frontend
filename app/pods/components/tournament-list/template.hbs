@@ -8,8 +8,10 @@
     </td>
   </thead>
   <tbody>
-    {{#each playedTournaments as |tournament|}}
-      {{tournament-card tournament=tournament}}
-    {{/each}}
+    <tr class="tournament">
+      {{#each playedTournaments as |tournament|}}
+        {{tournament-card tournament=tournament}}
+      {{/each}}
+    </tr>
   </tbody>
 </table>
