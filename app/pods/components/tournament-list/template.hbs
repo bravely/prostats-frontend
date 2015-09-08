@@ -1,5 +1,17 @@
-<ul>
-{{#each playedTournaments as |tournament|}}
-  {{tournament-card tournament=tournament}}
-{{/each}}
-</ul>
+<table>
+  <thead>
+    <td>
+      Tournament
+    </td>
+    <td>
+      Last Match
+    </td>
+  </thead>
+  <tbody>
+    <tr class="tournament">
+      {{#each playedTournaments as |tournament|}}
+        {{tournament-card tournament=tournament}}
+      {{/each}}
+    </tr>
+  </tbody>
+</table>
