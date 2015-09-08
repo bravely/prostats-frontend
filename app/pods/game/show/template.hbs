@@ -3,6 +3,13 @@
   <li>Blue Team: {{#link-to 'team.show' model.blueTeam.id}}{{model.blueTeam.name}}{{/link-to}}</li>
   <li>Red Team: {{#link-to 'team.show' model.redTeam.id}}{{model.redTeam.name}}{{/link-to}}</li>
   <li>Winner: {{model.winner.name}}</li>
+  <li class="youtubeUrl">
+    {{#if model.youtubeUrl}}
+      <a href={{model.youtubeUrl}}>Youtube</a>
+    {{else}}
+      No Youtube Link
+    {{/if}}
+  </li>
 </ul>
 
 <table>
