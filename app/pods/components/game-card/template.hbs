@@ -4,6 +4,15 @@
       {{game.blueTeam.name}} vs. {{game.redTeam.name}}
     {{/link-to}}
   </td>
+  {{#if game.youtubeUrl}}
+    <td>
+      <a href={{game.youtubeUrl}}>Youtube</a>
+    </td>
+  {{else}}
+  <td>
+    No Youtube Link
+  </td>
+  {{/if}}
   <td>
     {{game.playedAt}}
   </td>
