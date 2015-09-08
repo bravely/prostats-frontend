@@ -1,7 +1,6 @@
 # Prostats
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+The frontend application for Prostats, powered by a JSONAPI backend.
 
 ## Prerequisites
 
@@ -25,9 +24,6 @@ You will need the following things properly installed on your computer.
 * `ember server`
 * Visit your app at [http://localhost:4200](http://localhost:4200).
 
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
 
 ### Running Tests
 
@@ -39,15 +35,11 @@ Make use of the many generators for code, try `ember help generate` for more det
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+### Notes
 
-Specify what it takes to deploy your app.
-
-## Further Reading / Useful Links
-
-* [ember.js](http://emberjs.com/)
-* [ember-cli](http://www.ember-cli.com/)
-* Development Browser Extensions
-  * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
-  * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
+Currently many Route and Integration tests are fairly hollow-
+[Ember CLI Mirage](https://github.com/samselikoff/ember-cli-mirage) is currently undergoing a pretty large
+changeover to support JSONAPI serialization, and as I'm trying
+to move this forward as fast as possible, I'm avoiding
+duplicating work. The current limitations make it
+near-impossible to implement [Compound Documents](http://jsonapi.org/format/#document-compound-documents).
